@@ -1,0 +1,113 @@
+body{
+    background-image: url(back3.png);
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: fixed;
+    background-image: url(prism.png);
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    top: 0;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 5px 0 20px #130000;
+}
+
+header img{
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+}
+
+header ul{
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+header li{
+    display: inline-block;
+}
+
+header li a{
+    padding: 15px 20px;
+    border: 2px solid #999;
+    background: rgb(119, 134, 87);
+    text-decoration: none;
+    color: gainsboro;
+}
+
+header li a:hover{
+    padding: 15px 20px;
+    border: 2px solid #999;
+    background: rgb(255, 255, 255);
+    color: rgb(182, 110, 17);
+}
+
+main{
+    width: 80%;
+    margin: 120px auto 0 auto;
+    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 2px 2px 10px #333;
+}
+
+main nav{
+    width: 30%;
+    background-image: url(herringbone.png);
+}
+
+main nav h2{
+    text-align: center;
+}
+main nav ul li{
+    padding: 5px;
+}
+
+main nav a {
+    text-decoration: none;
+}
+
+main section{
+    width: 80%;
+    background-image: url(greek-vase.png);
+    box-shadow: 2px 2px 10px #333;
+
+}
+
+main section article{
+    margin-left: 30px;
+    margin-right: 250px;
+}
+
+footer{
+    text-align: center;
+    bottom: 0;
+    position: fixed;
+    background-image: url(prism.png);
+    width: 100%;
+    margin: -20px auto -10px auto;
+}
+
+footer ul{
+    list-style-type: none;
+}
+
+footer ul li{
+    display: inline;
+    padding: 10px;
+    align-items: center;
+    color: burlywood;
+    text-decoration: none;
+}
+
+footer li a{
+    color: burlywood;
+    text-decoration: none;
+}
