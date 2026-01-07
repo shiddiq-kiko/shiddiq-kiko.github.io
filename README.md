@@ -2,7 +2,7 @@
 
 A responsive, high-performance personal portfolio website built with modern web technologies. This project showcases a clean "Resume-style" layout with immersive parallax effects and smooth scroll animations.
 
-![Portfolio Preview](src/assets/pp.jpg)
+<!-- ![Portfolio Preview](src/assets/pp.jpg) -->
 
 ## 🚀 Tech Stack
 
