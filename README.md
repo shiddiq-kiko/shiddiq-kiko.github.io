@@ -54,6 +54,35 @@ The codebase follows **Domain-Driven Design (DDD)** principles to ensure maintai
     npm run build
     ```
 
+## 🚀 Deployment to GitHub Pages
+
+This project is configured to automatically deploy to GitHub Pages using GitHub Actions.
+
+### 1. Repository Configuration
+1.  Create a new repository on GitHub (e.g., `portofolio`).
+2.  **Important:** Open `vite.config.ts` and ensure the `base` property matches your repository name:
+    ```typescript
+    // If repo is 'my-portfolio', set: base: '/my-portfolio/'
+    base: '/portofolio/',
+    ```
+
+### 2. Push Code
+Initialize git and push your code:
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git push -u origin main
+```
+
+### 3. Enable GitHub Pages
+1.  Go to your repository **Settings** on GitHub.
+2.  Navigate to **Pages** (on the left sidebar).
+3.  Under **Build and deployment**, set **Source** to **GitHub Actions**.
+4.  The action defined in `.github/workflows/deploy.yml` will automatically trigger on the next push.
+
 ## 📂 Project Structure
 
 ```
