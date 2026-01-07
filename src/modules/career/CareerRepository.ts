@@ -6,20 +6,15 @@ export const experienceData: Experience[] = [
     role: "Backend Engineer",
     period: "2021 – PRESENT",
     type: "Full-time",
-    description: "Help a team which consist of Backend Developer and Frontend Developer using Golang or Java to finish a project as needed from planning stage until delivering and maintaining stage."
-  },
-  {
-    company: "SALT (TELKOMSEL)",
-    role: "Backend Engineer",
-    period: "2019 – PRESENT",
-    type: "Contract",
-    description: "Help a team which consist of Backend Developer and Frontend Developer to deliver a complex development for projects such as PEGASUS, and Univiz Back End."
+    link: "https://salt.id/id-en",
+    description: "Help a team which consist of Backend Developer and Frontend Developer using Golang or Java to finish a project as needed from planning stage until delivering and maintaining multiple complex Telkomsel projects such as Telkomsel Mobile Loan, Tsurvey, Maxstream, Telkomsel Smart Pay, and multiple Telkomsel internal dashboard."
   },
   {
     company: "edConnect",
     role: "Software Engineer",
     period: "2020 – 2021",
     type: "Full-time",
+    link: "https://edconnect.co.id/",
     description: "Develop, enhance, and maintain web-based School Management System portal for PT. edConnect Indonesia"
   },
   {
@@ -29,27 +24,27 @@ export const experienceData: Experience[] = [
     type: "Internship",
     link: "https://www.rf-berjangka.com/"
   },
-   {
+  {
     company: "PT Dok Perkapalan Surabaya",
     role: "Internship",
     period: "Oct-Nov 2016",
     type: "Internship",
-    link: "https://dok-sby.id/"
+    link: "https://www.doksurabaya.id/"
   }
 ];
 
 export const educationData: Education[] = [
   {
-    institution: "Muhammadiyah University of Surakarta",
-    degree: "Mechanical Engineering",
-    period: "2013-2018",
-    link: "https://www.ums.ac.id/"
-  },
-  {
     institution: "Hacktiv8",
     degree: "Full Stack Programming",
     period: "2019",
     link: "https://hacktiv8.com/"
+  },
+  {
+    institution: "Muhammadiyah University of Surakarta",
+    degree: "Mechanical Engineering",
+    period: "2013-2018",
+    link: "https://www.ums.ac.id/"
   }
 ];
 
