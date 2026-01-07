@@ -80,14 +80,14 @@ onMounted(() => {
                <ExpertiseList :skills="profile.expertise" />
             </section>
 
-            <!-- Experience -->
-            <section class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 scroll-hidden opacity-0 translate-y-8 transition-all duration-700 ease-out delay-300">
-               <ExperienceList :experiences="experiences" />
-            </section>
-
             <!-- Personal Projects -->
             <section class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 scroll-hidden opacity-0 translate-y-8 transition-all duration-700 ease-out delay-400">
                <ProjectList :projects="projects" />
+            </section>
+
+            <!-- Experience -->
+            <section class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 scroll-hidden opacity-0 translate-y-8 transition-all duration-700 ease-out delay-300">
+               <ExperienceList :experiences="experiences" />
             </section>
 
              <!-- Education -->
