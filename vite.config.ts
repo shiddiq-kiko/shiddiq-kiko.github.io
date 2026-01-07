@@ -7,7 +7,7 @@ export default defineConfig({
   // IMPORTANT: The 'base' must match your GitHub repository name.
   // If your repo is https://github.com/user/my-portfolio, set this to '/my-portfolio/'.
   // If you are deploying to https://user.github.io/ (root), set this to '/'.
-  base: '/shiddiq-kiko.github.io/',
+  base: '/',
   plugins: [vue()],
   test: {
     globals: true,
