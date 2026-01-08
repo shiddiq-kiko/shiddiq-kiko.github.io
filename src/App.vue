@@ -6,12 +6,15 @@ import ExperienceList from './modules/career/ExperienceList.vue';
 import EducationList from './modules/career/EducationList.vue';
 import ExpertiseList from './modules/career/ExpertiseList.vue';
 import ProjectList from './modules/career/ProjectList.vue';
+import FloatingNavbar from './ui/FloatingNavbar.vue';
 
 import { ProfileRepository } from './modules/identity/ProfileRepository';
 import { CareerRepository } from './modules/career/CareerRepository';
+import { useTheme } from './composables/useTheme';
 
 const profileRepo = new ProfileRepository();
 const careerRepo = new CareerRepository();
+useTheme(); // Just initialize theme
 
 const profile = profileRepo.getProfile();
 const experiences = careerRepo.getExperience();
@@ -43,8 +46,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="font-sans text-gray-900 bg-slate-50">
+  <div class="font-sans text-gray-900 bg-slate-50 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
     
+    <FloatingNavbar />
+
     <!-- Hero Section (Screen 1) -->
     <HeroSection :profile="profile" />
 
@@ -61,16 +66,16 @@ onMounted(() => {
         <div class="lg:col-span-8 space-y-8">
             
             <!-- Professional Summary -->
-            <section class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 scroll-hidden opacity-0 translate-y-8 transition-all duration-700 ease-out delay-100">
-                 <h2 class="text-xl font-bold text-gray-900 flex items-center mb-4">
-                  <span class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center mr-3">
+            <section class="bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 p-8 scroll-hidden opacity-0 translate-y-8 transition-all duration-700 ease-out delay-100">
+                 <h2 class="text-xl font-bold text-gray-900 dark:text-white flex items-center mb-4">
+                  <span class="w-8 h-8 rounded-lg bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mr-3">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                       <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
                     </svg>
                   </span>
                   About Me
                 </h2>
-                <p class="text-gray-600 leading-relaxed text-justify">
+                <p class="text-gray-600 dark:text-slate-300 leading-relaxed text-justify">
                     {{ profile.overview }}
                 </p>
             </section>
@@ -81,21 +86,21 @@ onMounted(() => {
             </section>
 
             <!-- Personal Projects -->
-            <section class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 scroll-hidden opacity-0 translate-y-8 transition-all duration-700 ease-out delay-400">
+            <section class="bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 p-8 scroll-hidden opacity-0 translate-y-8 transition-all duration-700 ease-out delay-400">
                <ProjectList :projects="projects" />
             </section>
 
             <!-- Experience -->
-            <section class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 scroll-hidden opacity-0 translate-y-8 transition-all duration-700 ease-out delay-300">
+            <section class="bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 p-8 scroll-hidden opacity-0 translate-y-8 transition-all duration-700 ease-out delay-300">
                <ExperienceList :experiences="experiences" />
             </section>
 
              <!-- Education -->
-            <section class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 scroll-hidden opacity-0 translate-y-8 transition-all duration-700 ease-out delay-500">
+            <section class="bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 p-8 scroll-hidden opacity-0 translate-y-8 transition-all duration-700 ease-out delay-500">
                <EducationList :educations="educations" />
             </section>
             
-             <footer class="text-center pt-8 text-gray-400 text-sm scroll-hidden opacity-0 transition-opacity duration-700">
+             <footer class="text-center pt-8 text-gray-400 dark:text-slate-500 text-sm scroll-hidden opacity-0 transition-opacity duration-700">
                 <p>Copyright &copy; {{ profile.name }} - {{ new Date().getFullYear() }}</p>
             </footer>
 

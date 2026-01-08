@@ -15,21 +15,23 @@ export const experienceData: Experience[] = [
     period: "2020 – 2021",
     type: "Full-time",
     link: "https://edconnect.co.id/",
-    description: "Develop, enhance, and maintain web-based School Management System portal for PT. edConnect Indonesia"
+    description: "Develop, enhance, and maintain web-based School Management System portal based on client requirements using Java and Vue.js."
   },
   {
     company: "PT Rifan Financindo Berjangka",
     role: "Internship",
     period: "Mar-May 2019",
     type: "Internship",
-    link: "https://www.rf-berjangka.com/"
+    link: "https://www.rf-berjangka.com/",
+    description: "Educate, assist, and support client to investing in financial product such as forex, commodities, indices, and precious metals."
   },
   {
     company: "PT Dok Perkapalan Surabaya",
     role: "Internship",
     period: "Oct-Nov 2016",
     type: "Internship",
-    link: "https://www.doksurabaya.id/"
+    link: "https://www.doksurabaya.id/",
+    description: "Assist the engineer in charge to monitor and maintain the ship's engine performance and condition."
   }
 ];
 
@@ -65,8 +67,8 @@ export const projectData: Project[] = [
     techStack: ["React.js", "Firebase"],
     links: [
       { label: "Website", url: "https://nimelist.firebaseapp.com" },
-      { label: "Github (Client)", url: "https://github.com/shiddiq-kiko/react-challenge" },
-      { label: "Github (Server)", url: "https://github.com/shiddiq-kiko/react-challenge-server" }
+      { label: "Github (Client)", url: "https://github.com/shiddiq-kiko/react-challenge" }
+      // { label: "Github (Server)", url: "https://github.com/shiddiq-kiko/react-challenge-server" }
     ]
   }
 ];

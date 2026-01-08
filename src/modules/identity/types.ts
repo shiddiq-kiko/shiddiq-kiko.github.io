@@ -11,4 +11,6 @@ export interface Profile {
   introduction: string; // Old About Me
   overview: string; // New PDF Overview
   expertise: string[]; // New PDF Field of Expertise
+  linkedin: string;
+  github: string;
 }
