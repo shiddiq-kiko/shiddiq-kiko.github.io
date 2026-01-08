@@ -49,7 +49,7 @@ onUnmounted(() => {
         class="p-3 rounded-full transition-all duration-500 focus:outline-none flex items-center justify-center shadow-lg"
         :class="[
           isScrolled 
-            ? 'bg-white-600 text-white shadow-indigo-200 dark:shadow-none' 
+            ? 'bg-white-600 text-white shadow-indigo-200 dark:shadow-none dark:text-white border border-gray-200 dark:border-slate-700 ' 
             : 'bg-white/80 dark:bg-slate-800/80 text-gray-900 dark:text-white border border-gray-200 dark:border-slate-700 backdrop-blur-sm'
         ]"
         :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
