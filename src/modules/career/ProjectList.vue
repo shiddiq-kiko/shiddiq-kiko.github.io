@@ -7,9 +7,9 @@ defineProps<{
 </script>
 
 <template>
-  <div class="space-y-8 transition-colors duration-300">
-    <h2 class="text-xl font-bold text-gray-900 dark:text-white flex items-center">
-      <span class="w-8 h-8 rounded-lg bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mr-3">
+  <div class="space-y-8 transition-colors duration-300 print:space-y-2">
+    <h2 class="text-xl font-bold text-gray-900 dark:text-white flex items-center print:mb-2 print:pb-1 print:border-b-2 print:border-gray-200">
+      <span class="w-8 h-8 rounded-lg bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mr-3 print:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
           <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
         </svg>
@@ -17,25 +17,25 @@ defineProps<{
       Personal Projects
     </h2>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div v-for="(project, index) in projects" :key="index" class="bg-gray-50 dark:bg-slate-700/30 rounded-xl p-6 border border-gray-100 dark:border-slate-700 flex flex-col hover:shadow-md transition-all">
-        <div class="mb-4">
-             <div class="flex justify-between items-start">
-                 <h3 class="text-lg font-bold text-gray-900 dark:text-white">{{ project.name }}</h3>
-                 <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 border border-gray-200 dark:border-slate-600 px-2 py-1 rounded-full whitespace-nowrap">{{ project.period }}</span>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 print:grid-cols-2 print:gap-4 print:gap-y-6">
+      <div v-for="(project, index) in projects" :key="index" class="bg-gray-50 dark:bg-slate-700/30 rounded-xl p-6 border border-gray-100 dark:border-slate-700 flex flex-col hover:shadow-md transition-all print:bg-transparent print:p-0 print:border-none print:shadow-none print:block print:mb-0">
+        <div class="mb-4 print:mb-1">
+             <div class="flex justify-between items-start print:justify-between print:items-baseline">
+                 <h3 class="text-lg font-bold text-gray-900 dark:text-white print:text-base print:text-gray-900">{{ project.name }}</h3>
+                 <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 border border-gray-200 dark:border-slate-600 px-2 py-1 rounded-full whitespace-nowrap print:border-none print:p-0 print:text-gray-600 print:text-xs print:font-normal">{{ project.period }}</span>
              </div>
              
              <!-- Tech Stack -->
-             <div class="flex flex-wrap gap-2 mt-2">
-                 <span v-for="tech in project.techStack" :key="tech" class="text-xs text-indigo-600 dark:text-indigo-400 font-medium bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 rounded">
+             <div class="flex flex-wrap gap-2 mt-2 print:mt-1 print:gap-1">
+                 <span v-for="tech in project.techStack" :key="tech" class="text-xs text-indigo-600 dark:text-indigo-400 font-medium bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 rounded print:bg-transparent print:text-gray-600 print:p-0 print:text-[10px] print:italic after:content-[','] last:after:content-none print:mr-1">
                      {{ tech }}
                  </span>
              </div>
         </div>
 
-        <p class="text-gray-600 dark:text-slate-300 text-sm mb-6 flex-grow">{{ project.description }}</p>
+        <p class="text-gray-600 dark:text-slate-300 text-sm mb-6 flex-grow print:text-xs print:mb-1 print:text-gray-800 print:leading-tight">{{ project.description }}</p>
 
-        <div class="flex flex-col space-y-2 mt-auto">
+        <div class="flex flex-col space-y-2 mt-auto print:hidden">
             <a 
                 v-for="(link, lIndex) in project.links" 
                 :key="lIndex" 
