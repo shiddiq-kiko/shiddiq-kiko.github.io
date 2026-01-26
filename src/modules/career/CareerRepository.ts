@@ -56,15 +56,35 @@ export const projectData: Project[] = [
     period: "03/2020 – 03/2020",
     description: "Movie & Tv series mobile app build with React-native",
     techStack: ["React Native"],
+    show: false,
     links: [
       { label: "Github", url: "https://github.com/shiddiq-kiko/entertain-me" }
     ]
   },
   {
+    name: "remind-me",
+    period: "01/2026 – Now",
+    description: "Lightweight command-line reminder application build with Cobol, PowerShell, BatchFile, and ShellScript.",
+    techStack: ["Cobol", "PowerShell", "BatchFile", "ShellScript"],
+    show: true,
+    isDownloadable: true,
+    paths: [
+      {
+        label: "Download Windows Version",
+        path: "/download/remind-me/remind-me-win.zip",
+        icon: "/assets/windows_icon-icons.com_62712.svg"
+      }
+    ],
+    links: [
+      { label: "Github", url: "https://github.com/shiddiq-kiko/remind-me" }
+    ]
+  },
+  {
     name: "NimeList",
-    period: "03/2020 – 03/2020",
+    period: "03/2020 – Now",
     description: "Japanese sub-culture web application build with React.js.",
-    techStack: ["React.js", "Firebase"],
+    techStack: ["React.js", "Firebase", "Typescript"],
+    show: true,
     links: [
       { label: "Website", url: "https://nimelist.firebaseapp.com" },
       { label: "Github (Client)", url: "https://github.com/shiddiq-kiko/react-challenge" }

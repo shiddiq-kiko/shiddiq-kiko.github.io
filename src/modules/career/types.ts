@@ -19,6 +19,13 @@ export interface Project {
   period: string;
   description: string;
   techStack?: string[];
+  show: boolean;
+  isDownloadable?: boolean;
+  paths?: {
+    label: string;
+    path: string;
+    icon?: string;
+  }[];
   links: {
     label: string;
     url: string;
