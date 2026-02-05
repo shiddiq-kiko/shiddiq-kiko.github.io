@@ -27,6 +27,10 @@ defineProps<{
             <span class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 px-2 py-1 rounded print:bg-transparent print:border-none print:p-0 print:text-gray-600 print:text-xs print:font-normal">{{ edu.period }}</span>
         </div>
         <p class="text-indigo-600 dark:text-indigo-400 font-medium print:text-sm print:text-gray-700 print:font-bold">{{ edu.degree }}</p>
+        
+        <p v-if="edu.description" class="text-gray-600 dark:text-slate-300 leading-relaxed text-sm print:text-justify print:text-gray-800">
+            {{ edu.description }}
+        </p>
       </div>
     </div>
   </div>

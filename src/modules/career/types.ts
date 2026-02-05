@@ -12,6 +12,7 @@ export interface Education {
   degree: string;
   period: string;
   link?: string;
+  description: string;
 }
 
 export interface Project {

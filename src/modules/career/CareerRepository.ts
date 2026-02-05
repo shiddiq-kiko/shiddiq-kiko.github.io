@@ -40,13 +40,15 @@ export const educationData: Education[] = [
     institution: "Hacktiv8",
     degree: "Full Stack Programming",
     period: "2019",
-    link: "https://hacktiv8.com/"
+    link: "https://hacktiv8.com/",
+    description: "An intensive coding bootcamp best known for its industry-aligned curriculum, strong job-placement focus, and expertise in training beginners to become job-ready software developers through immersive, project-based learning."
   },
   {
     institution: "Muhammadiyah University of Surakarta",
     degree: "Mechanical Engineering",
     period: "2013-2018",
-    link: "https://www.ums.ac.id/"
+    link: "https://www.ums.ac.id/",
+    description: "A well-established engineering program within a nationally accredited private university in Indonesia known for its strong practical focus, solid engineering fundamentals, hands-on laboratory, innovation-based learning, and technology development with an emphasis on real-world applications and Islamic values."
   }
 ];
 
@@ -70,13 +72,23 @@ export const projectData: Project[] = [
     isDownloadable: true,
     paths: [
       {
-        label: "Download Windows Version",
+        label: "Windows",
         path: "/download/remind-me/remind-me-win.zip",
         icon: "/assets/windows_icon-icons.com_62712.svg"
+      },
+      {
+        label: "Linux",
+        path: "/download/remind-me/remind-me.zip",
+        icon: "/assets/brand-linux-svgrepo-com.svg"
+      },
+      {
+        label: "MacOS",
+        path: "/download/remind-me/remind-me.zip",
+        icon: "/assets/mac-svgrepo-com.svg"
       }
     ],
     links: [
-      { label: "Github", url: "https://github.com/shiddiq-kiko/remind-me" }
+      { label: "Github", url: "https://github.com/shiddiq-kiko/remind_me_cobol" }
     ]
   },
   {
