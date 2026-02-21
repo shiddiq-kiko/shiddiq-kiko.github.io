@@ -4,16 +4,29 @@ import { useTheme } from '../composables/useTheme';
 
 const { isDark, toggleTheme } = useTheme();
 const isScrolled = ref(false);
+const showDownloadOptions = ref(false);
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 50;
 };
 
-const downloadPdf = () => {
+const downloadPdf = (format: 'creative' | 'ats') => {
   const originalTitle = document.title;
   document.title = "Muhammad Ash Shiddieqy Kartiko";
+  
+  // Add format class to body for print styles
+  document.body.classList.add(`print-${format}`);
+  
   window.print();
+  
+  // Cleanup
+  document.body.classList.remove(`print-${format}`);
   document.title = originalTitle;
+  showDownloadOptions.value = false;
+};
+
+const toggleDownloadOptions = () => {
+  showDownloadOptions.value = !showDownloadOptions.value;
 };
 
 onMounted(() => {
@@ -50,24 +63,58 @@ onUnmounted(() => {
       <!-- Spacer for desktop -->
       <div class="hidden md:block flex-grow"></div>
 
-      <div class="flex flex-row md:flex-col-reverse items-center space-x-2 md:space-x-0 md:space-y-5">
-        <!-- Download PDF Button -->
-        <button 
-          @click="downloadPdf" 
-          class="p-3 rounded-full transition-all duration-500 focus:outline-none flex items-center justify-center shadow-lg"
-          :class="[
-            isScrolled 
-              ? 'bg-white-600 text-gray-900 shadow-indigo-200 dark:shadow-none dark:text-white border border-gray-200 dark:border-slate-700 hover:bg-gray-100 dark:hover:bg-slate-800' 
-              : 'bg-white/80 dark:bg-slate-800/80 text-gray-900 dark:text-white border border-gray-200 dark:border-slate-700 backdrop-blur-sm hover:bg-white dark:hover:bg-slate-800'
-          ]"
-          title="Download Resume PDF"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-          </svg>
-        </button>
+      <div class="flex flex-row md:flex-col-reverse items-center space-x-2 md:space-x-0 md:space-y-0`">
+        <!-- Download PDF Button & Options -->
+        <div class="relative">
+          <button 
+            @click="toggleDownloadOptions" 
+            class="p-3 rounded-full transition-all duration-500 focus:outline-none flex items-center justify-center shadow-lg"
+            :class="[
+              isScrolled 
+                ? 'bg-white text-gray-900 shadow-indigo-200 dark:shadow-none dark:text-white border border-gray-200 dark:border-slate-700 hover:bg-gray-100 dark:hover:bg-slate-800' 
+                : 'bg-white/80 dark:bg-slate-800/80 text-gray-900 dark:text-white border border-gray-200 dark:border-slate-700 backdrop-blur-sm hover:bg-white dark:hover:bg-slate-800'
+            ]"
+            title="Download Resume PDF"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+          </button>
 
-        <button class="opacity-0"></button>
+          <!-- Format Selection Menu -->
+          <transition 
+            enter-active-class="transition duration-200 ease-out"
+            enter-from-class="opacity-0 scale-95 -translate-y-2"
+            enter-to-class="opacity-100 scale-100 translate-y-0"
+            leave-active-class="transition duration-100 ease-in"
+            leave-from-class="opacity-100 scale-100 translate-y-0"
+            leave-to-class="opacity-0 scale-95 -translate-y-2"
+          >
+            <div 
+              v-if="showDownloadOptions"
+              class="absolute top-full right-0 mt-3 w-48 bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-gray-100 dark:border-slate-700 overflow-hidden"
+            >
+              <div class="p-2 space-y-1">
+                <button 
+                  @click="downloadPdf('creative')"
+                  class="w-full text-left px-4 py-3 text-sm font-medium rounded-xl transition-colors hover:bg-indigo-50 dark:hover:bg-indigo-900/30 text-gray-700 dark:text-slate-200 flex items-center"
+                >
+                  <span class="mr-3">🎨</span>
+                  Creative CV
+                </button>
+                <button 
+                  @click="downloadPdf('ats')"
+                  class="w-full text-left px-4 py-3 text-sm font-medium rounded-xl transition-colors hover:bg-indigo-50 dark:hover:bg-indigo-900/30 text-gray-700 dark:text-slate-200 flex items-center"
+                >
+                  <span class="mr-3">📄</span>
+                  ATS-Friendly CV
+                </button>
+              </div>
+            </div>
+          </transition>
+        </div>
+
+        <!-- <button class="opacity-0 md:hidden"></button> -->
 
         <!-- Theme Toggle Button -->
         <button 
@@ -99,6 +146,8 @@ onUnmounted(() => {
             </svg>
           </div>
         </button>
+
+        <!-- <button class="opacity-0 md:hidden"></button> -->
       </div>
     </div>
   </nav>

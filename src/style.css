@@ -32,7 +32,7 @@
   }
 
   /* Hide interactive elements and Hero */
-  nav, button, footer, .animate-enter, .no-print {
+  nav, button, footer, .animate-enter, .no-print, [role="button"] {
     display: none !important;
   }
 
@@ -51,17 +51,39 @@
     display: block !important;
   }
 
-  /* --- FORCE LIGHT MODE & REMOVE STYLING --- */
-  /* Reset backgrounds and borders for all cards/sections */
-  .bg-white, .dark\:bg-slate-800, .bg-gray-50, .dark\:bg-slate-700\/30,
-  .rounded-2xl, .rounded-xl, .shadow-sm, .border {
+  /* --- ATS-SPECIFIC: STRIP ALMOST EVERYTHING --- */
+  body.print-ats .bg-white, 
+  body.print-ats .dark\:bg-slate-800, 
+  body.print-ats .bg-gray-50, 
+  body.print-ats .dark\:bg-slate-700\/30,
+  body.print-ats .rounded-2xl, 
+  body.print-ats .rounded-xl, 
+  body.print-ats .shadow-sm, 
+  body.print-ats .border {
     background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
     border-radius: 0 !important;
   }
 
-  /* Reset Text Colors */
+  /* ATS: Hide Avatar/Images */
+  body.print-ats aside .w-40, 
+  body.print-ats img {
+    display: none !important;
+  }
+
+  /* --- CREATIVE-SPECIFIC: KEEP SOME BRANDING --- */
+  body.print-creative .rounded-2xl {
+    border-radius: 1rem !important;
+  }
+  
+  body.print-creative .bg-indigo-50,
+  body.print-creative .bg-indigo-100 {
+    background-color: #f5f3ff !important;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* Reset Text Colors for both */
   .text-white, .dark\:text-white, .dark .text-white,
   .text-slate-100, .text-slate-300,
   .dark\:text-slate-100, .dark\:text-slate-300,
@@ -74,8 +96,11 @@
     color: #312e81 !important; /* indigo-900 for better contrast on paper */
   }
   
-  /* Remove background from icons/badges to save ink */
-  .bg-indigo-100, .dark\:bg-indigo-900\/50, .bg-indigo-50, .dark\:bg-indigo-900\/30 {
+  /* Remove background from icons/badges for ATS to save ink */
+  body.print-ats .bg-indigo-100, 
+  body.print-ats .dark\:bg-indigo-900\/50, 
+  body.print-ats .bg-indigo-50, 
+  body.print-ats .dark\:bg-indigo-900\/30 {
     background-color: transparent !important;
     color: #312e81 !important;
     border: 1px solid #e5e7eb !important; /* light border instead of bg */

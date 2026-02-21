@@ -82,7 +82,11 @@ onMounted(() => {
 
              <!-- Expertise -->
             <section class="scroll-hidden opacity-0 translate-y-8 transition-all duration-700 ease-out delay-200 print:mb-2">
-               <ExpertiseList :skills="profile.expertise" />
+               <ExpertiseList 
+                 :expertise="profile.expertise" 
+                 :techStack="profile.techStack"
+                 :languages="profile.languages"
+               />
             </section>
 
             <!-- Personal Projects -->
