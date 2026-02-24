@@ -37,7 +37,17 @@ export const profileData: Profile = {
     "AWS",
     "Git",
     "Express",
-    "NestJS"
+    "NestJS",
+    "Golang",
+    "Java",
+    "JUnit",
+    "Mockito",
+    "GCP",
+    "MySQL",
+    "MongoDB",
+    "RabbitMQ",
+    "Kafka",
+    "OracleDB",
   ],
   languages: [
     "Indonesian (Native)",
