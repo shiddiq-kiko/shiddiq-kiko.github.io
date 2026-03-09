@@ -80,13 +80,9 @@ onMounted(() => {
                 </p>
             </section>
 
-             <!-- Expertise -->
-            <section class="scroll-hidden opacity-0 translate-y-8 transition-all duration-700 ease-out delay-200 print:mb-2">
-               <ExpertiseList 
-                 :expertise="profile.expertise" 
-                 :techStack="profile.techStack"
-                 :languages="profile.languages"
-               />
+            <!-- Experience -->
+            <section class="bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 p-8 scroll-hidden opacity-0 translate-y-8 transition-all duration-700 ease-out delay-300 print:p-0 print:border-none print:shadow-none print:mb-2">
+               <ExperienceList :experiences="experiences" />
             </section>
 
             <!-- Personal Projects -->
@@ -94,9 +90,13 @@ onMounted(() => {
                <ProjectList :projects="projects" />
             </section>
 
-            <!-- Experience -->
-            <section class="bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 p-8 scroll-hidden opacity-0 translate-y-8 transition-all duration-700 ease-out delay-300 print:p-0 print:border-none print:shadow-none print:mb-2">
-               <ExperienceList :experiences="experiences" />
+             <!-- Expertise -->
+            <section class="scroll-hidden opacity-0 translate-y-8 transition-all duration-700 ease-out delay-200 print:mb-2">
+               <ExpertiseList 
+                 :expertise="profile.expertise" 
+                 :techStack="profile.techStack"
+                 :languages="profile.languages"
+               />
             </section>
 
              <!-- Education -->

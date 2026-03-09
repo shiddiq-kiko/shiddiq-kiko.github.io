@@ -14,7 +14,7 @@ export const experienceData: Experience[] = [
       "Strengthened system resilience and scalability, enabling seamless performance across Telkomsel’s nationwide user base.",
       "Contributed to end-to-end delivery, reducing deployment cycles and improving system uptime, directly supporting Telkomsel’s digital transformation initiatives."
     ],
-    techStack: ["Golang", "Java", "Spring Boot", "Microservices", "PostgreSQL", "Redis", "Kafka", "RabbitMQ", "Docker", "AWS", "CI/CD", "GIT", "OracleDB", "MySQL", "GitlabAPi", "NomadHQ", "Others"]
+    techStack: ["Golang", "Java", "Spring Boot", "Microservices", "PostgreSQL", "Redis", "Kafka", "RabbitMQ", "Docker", "AWS", "CI/CD", "GIT", "OracleDB", "MySQL", "GitlabAPI", "Others"]
   },
   {
     company: "edConnect",
