@@ -22,7 +22,14 @@ export const experienceData: Experience[] = [
     period: "2020 – 2021",
     type: "Full-time",
     link: "https://edconnect.co.id/",
-    description: "Develop, enhance, and maintain web-based School Management System portal based on client requirements using Java and Vue.js.",
+    description: "Developed, enhanced, and maintained a web-based School Management System portal tailored to client requirements, leveraging Java and Vue.js for scalable and user-friendly solutions.",
+    listDescription: [
+      "Engineered a robust platform adopted by multiple high-profile private schools in Indonesia, supporting 5,000+ students.",
+      "Optimized system architecture to handle large-scale academic and administrative data, ensuring smooth performance during peak usage periods.",
+      "Strengthened system reliability and usability, enhancing the experience for schools, teachers, students, and parents.",
+      "Delivered measurable improvements in efficiency, reducing manual processes and enabling real-time access to academic records, attendance, and financial data."
+
+    ],
     techStack: ["Java", "Vue.js", "Spring Framework", "MySQL"]
   },
   {
