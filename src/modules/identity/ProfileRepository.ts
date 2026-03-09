@@ -48,6 +48,10 @@ export const profileData: Profile = {
     "RabbitMQ",
     "Kafka",
     "OracleDB",
+    "Kubernetes",
+    "jenkins",
+    "NomadHQ",
+    "Others"
   ],
   languages: [
     "Indonesian (Native)",
