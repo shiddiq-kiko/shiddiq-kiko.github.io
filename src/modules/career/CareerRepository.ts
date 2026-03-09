@@ -7,7 +7,14 @@ export const experienceData: Experience[] = [
     period: "2021 – PRESENT",
     type: "Full-time",
     link: "https://salt.id/id-en",
-    description: "Help a team which consist of Backend Developer and Frontend Developer using Golang or Java to finish a project as needed from planning stage until delivering and maintaining multiple complex Telkomsel projects such as Telkomsel Mobile Loan, Tsurvey, Maxstream, Telkomsel Smart Pay, and multiple Telkomsel internal dashboard."
+    description: "Collaborated with a cross-functional team of Backend and Frontend Developers (using Golang and Java) to deliver and maintain multiple high-impact Telkomsel projects—including Mobile Loan, TSurvey, Maxstream, Smart Pay, and internal dashboards—from planning through deployment and ongoing support.",
+    listDescription: [
+      "Engineered systems capable of handling 5,000+ transactions per second (TPS), scaling to process over 50 million records daily.",
+      "Optimized big data pipelines and application logic to process and calculate billions of data points, ensuring reliability and accuracy under heavy load.",
+      "Strengthened system resilience and scalability, enabling seamless performance across Telkomsel’s nationwide user base.",
+      "Contributed to end-to-end delivery, reducing deployment cycles and improving system uptime, directly supporting Telkomsel’s digital transformation initiatives."
+    ],
+    techStack: ["Golang", "Java", "Spring Boot", "Microservices", "PostgreSQL", "Redis", "Kafka", "RabbitMQ", "Docker", "AWS", "CI/CD", "GIT", "OracleDB", "MySQL", "GitlabAPi", "NomadHQ", "Others"]
   },
   {
     company: "edConnect",
@@ -15,7 +22,8 @@ export const experienceData: Experience[] = [
     period: "2020 – 2021",
     type: "Full-time",
     link: "https://edconnect.co.id/",
-    description: "Develop, enhance, and maintain web-based School Management System portal based on client requirements using Java and Vue.js."
+    description: "Develop, enhance, and maintain web-based School Management System portal based on client requirements using Java and Vue.js.",
+    techStack: ["Java", "Vue.js", "Spring Framework", "MySQL"]
   },
   {
     company: "PT Rifan Financindo Berjangka",
@@ -23,7 +31,8 @@ export const experienceData: Experience[] = [
     period: "Mar-May 2019",
     type: "Internship",
     link: "https://www.rf-berjangka.com/",
-    description: "Educate, assist, and support client to investing in financial product such as forex, commodities, indices, and precious metals."
+    description: "Educate, assist, and support client to investing in financial product such as forex, commodities, indices, and precious metals.",
+    techStack: ["Financial Analysis", "Customer Support"]
   },
   {
     company: "PT Dok Perkapalan Surabaya",
@@ -31,7 +40,8 @@ export const experienceData: Experience[] = [
     period: "Oct-Nov 2016",
     type: "Internship",
     link: "https://www.doksurabaya.id/",
-    description: "Assist the engineer in charge to monitor and maintain the ship's engine performance and condition."
+    description: "Assist the engineer in charge to monitor and maintain the ship's engine performance and condition.",
+    techStack: ["Ship Engineering", "Maintenance"]
   }
 ];
 

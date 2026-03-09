@@ -5,6 +5,8 @@ export interface Experience {
   type?: 'Internship' | 'Full-time' | 'Contract';
   link?: string;
   description?: string;
+  listDescription?: string[];
+  techStack?: string[];
 }
 
 export interface Education {

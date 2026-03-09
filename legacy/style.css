@@ -142,3 +142,13 @@ footer h5{
  h1, h2{
      color: rgb(133, 43, 43);
  }
+
+ .phone-info {
+     display: none;
+ }
+
+ @media print {
+     .phone-info {
+         display: list-item;
+     }
+ }

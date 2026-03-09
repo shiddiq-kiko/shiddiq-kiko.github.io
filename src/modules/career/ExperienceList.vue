@@ -36,6 +36,23 @@ defineProps<{
         <p v-if="exp.description" class="text-gray-600 dark:text-slate-300 leading-relaxed text-sm print:text-justify print:text-gray-800">
             {{ exp.description }}
         </p>
+
+        <ul v-if="exp.listDescription && exp.listDescription.length > 0" class="mt-2 space-y-1 list-disc list-inside text-gray-600 dark:text-slate-300 text-sm print:text-gray-800">
+          <li v-for="(item, iIndex) in exp.listDescription" :key="iIndex" class="leading-relaxed">
+            {{ item }}
+          </li>
+        </ul>
+
+        <!-- Tech Stack -->
+        <div v-if="exp.techStack && exp.techStack.length > 0" class="mt-3 flex flex-wrap gap-2 print:mt-1">
+          <span 
+            v-for="(tech, tIndex) in exp.techStack" 
+            :key="tIndex"
+            class="px-2 py-0.5 bg-indigo-50 dark:bg-slate-700/50 text-indigo-600 dark:text-indigo-400 text-xs font-medium rounded-md border border-indigo-100 dark:border-slate-600 print:bg-transparent print:border-gray-300 print:text-gray-700 print:px-1.5 print:py-0"
+          >
+            {{ tech }}
+          </span>
+        </div>
       </div>
     </div>
   </div>
