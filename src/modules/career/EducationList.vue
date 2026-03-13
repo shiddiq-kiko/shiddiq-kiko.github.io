@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Education } from './types';
+import HighlightedText from '../../ui/HighlightedText.vue';
 
 defineProps<{
   educations: Education[]
@@ -28,9 +29,7 @@ defineProps<{
         </div>
         <p class="text-indigo-600 dark:text-indigo-400 font-medium print:text-sm print:text-gray-700 print:font-bold">{{ edu.degree }}</p>
         
-        <p v-if="edu.description" class="text-gray-600 dark:text-slate-300 leading-relaxed text-sm print:text-justify print:text-gray-800">
-            {{ edu.description }}
-        </p>
+        <HighlightedText v-if="edu.description" tag="p" :text="edu.description" class="text-gray-600 dark:text-slate-300 leading-relaxed text-sm print:text-justify print:text-gray-800" />
       </div>
     </div>
   </div>

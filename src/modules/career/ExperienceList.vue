@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Experience } from './types';
+import HighlightedText from '../../ui/HighlightedText.vue';
 
 defineProps<{
   experiences: Experience[]
@@ -33,13 +34,11 @@ defineProps<{
         
         <p class="text-indigo-600 dark:text-indigo-400 font-medium mb-2 print:text-sm print:text-gray-700 print:mb-1 print:font-bold">{{ exp.role }} <span v-if="exp.type" class="text-gray-400 dark:text-slate-500 font-normal text-sm print:text-gray-500"> — {{ exp.type }}</span></p>
         
-        <p v-if="exp.description" class="text-gray-600 dark:text-slate-300 leading-relaxed text-sm print:text-justify print:text-gray-800">
-            {{ exp.description }}
-        </p>
+        <HighlightedText v-if="exp.description" tag="p" :text="exp.description" class="text-gray-600 dark:text-slate-300 leading-relaxed text-sm print:text-justify print:text-gray-800" />
 
         <ul v-if="exp.listDescription && exp.listDescription.length > 0" class="mt-2 space-y-1 list-disc list-inside text-gray-600 dark:text-slate-300 text-sm print:text-gray-800">
           <li v-for="(item, iIndex) in exp.listDescription" :key="iIndex" class="leading-relaxed">
-            {{ item }}
+            <HighlightedText :text="item" />
           </li>
         </ul>
 

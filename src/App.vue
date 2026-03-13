@@ -7,6 +7,7 @@ import EducationList from './modules/career/EducationList.vue';
 import ExpertiseList from './modules/career/ExpertiseList.vue';
 import ProjectList from './modules/career/ProjectList.vue';
 import FloatingNavbar from './ui/FloatingNavbar.vue';
+import HighlightedText from './ui/HighlightedText.vue';
 
 import { ProfileRepository } from './modules/identity/ProfileRepository';
 import { CareerRepository } from './modules/career/CareerRepository';
@@ -64,21 +65,19 @@ onMounted(() => {
 
         <!-- Right Column: Main Content -->
         <div class="lg:col-span-8 space-y-8 print:space-y-2 print:w-full">
-            
-            <!-- Professional Summary -->
-            <section class="bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 p-8 scroll-hidden opacity-0 translate-y-8 transition-all duration-700 ease-out delay-100 print:p-0 print:border-none print:shadow-none">
-                 <h2 class="text-xl font-bold text-gray-900 dark:text-white flex items-center mb-4 print:mb-2 print:pb-1 print:border-b-2 print:border-gray-200">
-                  <span class="w-8 h-8 rounded-lg bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mr-3 print:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-                    </svg>
-                  </span>
-                  About Me
-                </h2>
-                <p class="text-gray-600 dark:text-slate-300 leading-relaxed text-justify print:text-gray-800">
-                    {{ profile.overview }}
-                </p>
-            </section>
+
+             <!-- Professional Summary -->
+             <section class="bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 p-8 scroll-hidden opacity-0 translate-y-8 transition-all duration-700 ease-out delay-100 print:p-0 print:border-none print:shadow-none">
+                  <h2 class="text-xl font-bold text-gray-900 dark:text-white flex items-center mb-4 print:mb-2 print:pb-1 print:border-b-2 print:border-gray-200">
+                   <span class="w-8 h-8 rounded-lg bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mr-3 print:hidden">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                       <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                     </svg>
+                   </span>
+                   About Me
+                 </h2>
+                 <HighlightedText tag="p" :text="profile.overview" class="text-gray-600 dark:text-slate-300 leading-relaxed text-justify print:text-gray-800" />
+             </section>
 
             <!-- Experience -->
             <section class="bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 p-8 scroll-hidden opacity-0 translate-y-8 transition-all duration-700 ease-out delay-300 print:p-0 print:border-none print:shadow-none print:mb-2">

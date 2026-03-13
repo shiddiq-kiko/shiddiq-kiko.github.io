@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Project } from './types';
+import HighlightedText from '../../ui/HighlightedText.vue';
 
 defineProps<{
   projects: Project[]
@@ -34,7 +35,7 @@ defineProps<{
                </div>
           </div>
 
-          <p class="text-gray-600 dark:text-slate-300 text-sm mb-6 flex-grow print:text-xs print:mb-1 print:text-gray-800 print:leading-tight">{{ project.description }}</p>
+          <HighlightedText :text="project.description" tag="p" class="text-gray-600 dark:text-slate-300 text-sm mb-6 flex-grow print:text-xs print:mb-1 print:text-gray-800 print:leading-tight" />
 
           <div class="flex flex-col space-y-2 mt-auto">
               <!-- Download Links -->

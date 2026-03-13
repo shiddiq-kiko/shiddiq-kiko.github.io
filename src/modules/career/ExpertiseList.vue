@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import HighlightedText from '../../ui/HighlightedText.vue';
+
 defineProps<{
   expertise: string[];
   techStack: string[];
@@ -27,7 +29,7 @@ defineProps<{
             :key="skill" 
             class="px-3 py-1 bg-slate-50 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 font-medium text-xs rounded-lg border border-slate-200 dark:border-slate-600 hover:border-indigo-300 dark:hover:border-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-all duration-300 cursor-default print:bg-transparent print:border-gray-300 print:text-gray-800 print:px-2 print:py-0.5"
           >
-            {{ skill }}
+            <HighlightedText :text="skill" />
           </span>
         </div>
       </div>
@@ -41,7 +43,7 @@ defineProps<{
             :key="item" 
             class="px-3 py-1 bg-indigo-50/50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 font-medium text-xs rounded-lg border border-indigo-100 dark:border-indigo-800 hover:border-indigo-400 transition-all duration-300 cursor-default print:bg-transparent print:border-gray-300 print:text-gray-800 print:px-2 print:py-0.5"
           >
-            {{ item }}
+            <HighlightedText :text="item" />
           </span>
         </div>
       </div>
@@ -55,7 +57,7 @@ defineProps<{
             :key="lang" 
             class="px-3 py-1 bg-slate-50 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 font-medium text-xs rounded-lg border border-slate-200 dark:border-slate-600 print:bg-transparent print:border-none print:text-gray-800 print:px-0 print:py-0 print:mr-4"
           >
-            {{ lang }}
+            <HighlightedText :text="lang" />
           </span>
         </div>
       </div>

@@ -7,11 +7,11 @@ export const experienceData: Experience[] = [
     period: "2021 – PRESENT",
     type: "Full-time",
     link: "https://salt.id/id-en",
-    description: "Collaborated with a cross-functional team of Backend and Frontend Developers (using Golang and Java) to deliver and maintain multiple high-impact Telkomsel projects—including Mobile Loan, TSurvey, Maxstream, Smart Pay, and internal dashboards—from planning through deployment and ongoing support.",
+    description: "Collaborated with a cross-functional team of Backend and Frontend Developers (using **Golang**, **Java**, **Node.js**, and **phyton**) to deliver and maintain multiple ==high-impact Telkomsel projects==—including Mobile Loan, TSurvey, Maxstream, Smart Pay, and internal dashboards—from planning through deployment and ongoing support.",
     listDescription: [
-      "Engineered systems capable of handling 5,000+ transactions per second (TPS), scaling to process over 50 million records daily.",
-      "Optimized big data pipelines and application logic to process and calculate billions of data points, ensuring reliability and accuracy under heavy load.",
-      "Strengthened system resilience and scalability, enabling seamless performance across Telkomsel’s nationwide user base.",
+      "Engineered systems capable of handling **5,000+ transactions per second (TPS)**, scaling to process over **50 million records daily**.",
+      "Optimized big data pipelines and application logic to process and calculate **billions of data points**, ensuring reliability and accuracy under heavy load.",
+      "Strengthened system resilience and scalability, enabling seamless performance across ==Telkomsel’s nationwide and global user base==.",
       "Contributed to end-to-end delivery, reducing deployment cycles and improving system uptime, directly supporting Telkomsel’s digital transformation initiatives."
     ],
     techStack: ["Golang", "Java", "Spring Boot", "Microservices", "PostgreSQL", "Redis", "Kafka",
@@ -24,9 +24,9 @@ export const experienceData: Experience[] = [
     period: "2020 – 2021",
     type: "Full-time",
     link: "https://edconnect.co.id/",
-    description: "Developed, enhanced, and maintained a web-based School Management System portal tailored to client requirements, leveraging Java and Vue.js for scalable and user-friendly solutions.",
+    description: "Developed, enhanced, and maintained a web-based ==School Management System portal== tailored to client requirements, leveraging Java and Vue.js for scalable and user-friendly solutions.",
     listDescription: [
-      "Engineered a robust platform adopted by multiple high-profile private schools in Indonesia, supporting 5,000+ students.",
+      "Engineered a robust platform adopted by multiple high-profile private schools in Indonesia, supporting **5,000+ students**.",
       "Optimized system architecture to handle large-scale academic and administrative data, ensuring smooth performance during peak usage periods.",
       "Strengthened system reliability and usability, enhancing the experience for schools, teachers, students, and parents.",
       "Delivered measurable improvements in efficiency, reducing manual processes and enabling real-time access to academic records, attendance, and financial data."
@@ -60,14 +60,14 @@ export const educationData: Education[] = [
     degree: "Full Stack Programming",
     period: "2019",
     link: "https://hacktiv8.com/",
-    description: "An intensive coding bootcamp best known for its industry-aligned curriculum, strong job-placement focus, and expertise in training beginners to become job-ready software developers through immersive, project-based learning."
+    description: "An **intensive coding bootcamp** best known for its industry-aligned curriculum, strong job-placement focus, and expertise in training beginners to become job-ready software developers through immersive, project-based learning."
   },
   {
     institution: "Muhammadiyah University of Surakarta",
     degree: "Mechanical Engineering",
     period: "2013-2018",
     link: "https://www.ums.ac.id/",
-    description: "A well-established engineering program within a nationally accredited private university in Indonesia known for its strong practical focus, solid engineering fundamentals, hands-on laboratory, innovation-based learning, and technology development with an emphasis on real-world applications and Islamic values."
+    description: "A well-established engineering program within a nationally accredited private university in Indonesia known for its strong practical focus, solid engineering fundamentals, hands-on laboratory, **innovation-based learning**, and technology development."
   }
 ];
 

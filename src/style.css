@@ -131,6 +131,15 @@
   /* Specific adjustments for list items */
   li { margin-bottom: 0.25rem !important; }
 
+  mark {
+    background-color: #e0e7ff !important; /* indigo-100 */
+    color: #312e81 !important; /* indigo-900 */
+    padding: 0 2px !important;
+    border-radius: 2px !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
   /* Compact Profile Card */
   aside .w-40 { /* Avatar container */
     width: 6rem !important; 

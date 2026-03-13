@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, computed } from 'vue';
 import { Profile } from '../modules/identity/types';
+import HighlightedText from './HighlightedText.vue';
 
 defineProps<{
   profile: Profile
@@ -67,7 +68,7 @@ const scrollToContent = () => {
             Hi, I'm <span class="text-indigo-600 dark:text-indigo-400">{{ profile.nickname }}</span>.
         </h1>
         <p class="text-xl sm:text-2xl text-gray-600 dark:text-slate-300 font-light leading-relaxed">
-            "{{ profile.introduction }}"
+            "<HighlightedText :text="profile.introduction" />"
         </p>
     </div>
 
